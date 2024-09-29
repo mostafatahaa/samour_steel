@@ -22,10 +22,6 @@ class PagesController extends Controller
     {
         $settings = Settings::first();
         $categories = Category::all();
-
-
-
-
         return view('front.index', compact('settings', 'categories'));
     }
 

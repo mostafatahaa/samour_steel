@@ -21,7 +21,6 @@ Route::middleware('lang')->group(function () {
 
     Route::controller(PagesController::class)->group(function () {
         Route::get('/', 'index')->name('index');
-        Route::get('/', 'homePage')->name('home');
         Route::get('/why-choose-us', 'whyChooseUsPage')->name('why_choose_us');
         Route::get('/about-us', 'aboutUsPage')->name('about_us');
 

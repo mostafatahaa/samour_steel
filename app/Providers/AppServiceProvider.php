@@ -5,7 +5,7 @@ namespace App\Providers;
 use App\Models\AboutUs;
 use App\Models\Settings;
 use Illuminate\Support\ServiceProvider;
-use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
+//use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 
@@ -24,10 +24,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        LanguageSwitch::configureUsing(function (LanguageSwitch $switch) {
-            $switch
-                ->locales(['ar', 'en']);
-        });
+//        LanguageSwitch::configureUsing(function (LanguageSwitch $switch) {
+//            $switch
+//                ->locales(['ar', 'en']);
+//        });
         Paginator::useBootstrapFour();
 
         View::composer('*', function ($view) {
