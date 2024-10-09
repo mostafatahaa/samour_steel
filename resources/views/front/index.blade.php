@@ -1,58 +1,6 @@
 @include('front.layouts.header')
 
-@section('content')
-@endsection
 
-<div class="sub-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-8">
-                <ul class="info">
-                    <li><i class="fa fa-envelope"></i> info@company.com</li>
-                    <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160</li>
-                </ul>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <ul class="social-links">
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="https://x.com/minthu" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ***** Header Area Start ***** -->
-<header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <h1>Villa</h1>
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="properties.html">Properties</a></li>
-                        <li><a href="property-details.html">Property Details</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- ***** Header Area End ***** -->
 <div class="main-banner">
     <div class="owl-carousel owl-banner">
         @forelse($sliders as $slider)
@@ -74,7 +22,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="left-image">
-                    <img src="assets/images/featured.jpg" alt="">
+                    <img src="{{asset('front/assets/images/featured.jpg')}}" alt="">
                     <a href="property-details.html"><img src="assets/images/featured-icon.png" alt=""
                                                          style="max-width: 60px; padding: 0px;"></a>
                 </div>
@@ -95,7 +43,8 @@
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                              data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                Get <strong>the best villa</strong> website template in HTML CSS and Bootstrap for your
+                                Get <strong>the best villa</strong> website template in HTML CSS and Bootstrap for
+                                your
                                 business. TemplateMo provides you the <a
                                     href="https://www.google.com/search?q=best+free+css+templates" target="_blank">best
                                     free CSS templates</a> in the world. Please tell your friends about it.
@@ -112,7 +61,8 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                              data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod
+                                Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't
+                                eiusmod
                                 tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua.
                             </div>
@@ -121,14 +71,16 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
                                 Why is Villa Agency the best ?
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                              data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod
+                                Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't
+                                eiusmod
                                 tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua.
                             </div>
@@ -240,8 +192,10 @@
                                     </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="villa-tab" data-bs-toggle="tab" data-bs-target="#villa"
-                                            type="button" role="tab" aria-controls="villa" aria-selected="false">Villa
+                                    <button class="nav-link" id="villa-tab" data-bs-toggle="tab"
+                                            data-bs-target="#villa"
+                                            type="button" role="tab" aria-controls="villa" aria-selected="false">
+                                        Villa
                                         House
                                     </button>
                                 </li>
@@ -273,13 +227,18 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <h4>Extra Info About Property</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor
-                                            pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.
-                                            <br><br>When you need free CSS templates, you can simply type TemplateMo in
-                                            any search engine website. In addition, you can type TemplateMo Portfolio,
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod
+                                            tempor
+                                            pack incididunt ut labore et dolore magna aliqua quised ipsum
+                                            suspendisse.
+                                            <br><br>When you need free CSS templates, you can simply type TemplateMo
+                                            in
+                                            any search engine website. In addition, you can type TemplateMo
+                                            Portfolio,
                                             TemplateMo One Page Layouts, etc.</p>
                                         <div class="icon-button">
-                                            <a href="property-details.html"><i class="fa fa-calendar"></i> Schedule a
+                                            <a href="property-details.html"><i class="fa fa-calendar"></i> Schedule
+                                                a
                                                 visit</a>
                                         </div>
                                     </div>
@@ -303,19 +262,25 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <h4>Detail Info About Villa</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor
-                                            pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.
-                                            <br><br>Swag fanny pack lyft blog twee. JOMO ethical copper mug, succulents
-                                            typewriter shaman DIY kitsch twee taiyaki fixie hella venmo after messenger
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod
+                                            tempor
+                                            pack incididunt ut labore et dolore magna aliqua quised ipsum
+                                            suspendisse.
+                                            <br><br>Swag fanny pack lyft blog twee. JOMO ethical copper mug,
+                                            succulents
+                                            typewriter shaman DIY kitsch twee taiyaki fixie hella venmo after
+                                            messenger
                                             poutine next level humblebrag swag franzen.</p>
                                         <div class="icon-button">
-                                            <a href="property-details.html"><i class="fa fa-calendar"></i> Schedule a
+                                            <a href="property-details.html"><i class="fa fa-calendar"></i> Schedule
+                                                a
                                                 visit</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="penthouse" role="tabpanel" aria-labelledby="penthouse-tab">
+                            <div class="tab-pane fade" id="penthouse" role="tabpanel"
+                                 aria-labelledby="penthouse-tab">
                                 <div class="row">
                                     <div class="col-lg-3">
                                         <div class="info-table">
@@ -333,13 +298,18 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <h4>Extra Info About Penthouse</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor
-                                            pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.
-                                            <br><br>Swag fanny pack lyft blog twee. JOMO ethical copper mug, succulents
-                                            typewriter shaman DIY kitsch twee taiyaki fixie hella venmo after messenger
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod
+                                            tempor
+                                            pack incididunt ut labore et dolore magna aliqua quised ipsum
+                                            suspendisse.
+                                            <br><br>Swag fanny pack lyft blog twee. JOMO ethical copper mug,
+                                            succulents
+                                            typewriter shaman DIY kitsch twee taiyaki fixie hella venmo after
+                                            messenger
                                             poutine next level humblebrag swag franzen.</p>
                                         <div class="icon-button">
-                                            <a href="property-details.html"><i class="fa fa-calendar"></i> Schedule a
+                                            <a href="property-details.html"><i class="fa fa-calendar"></i> Schedule
+                                                a
                                                 visit</a>
                                         </div>
                                     </div>
@@ -475,5 +445,6 @@
         </div>
     </div>
 </div>
+
 
 @include('front.layouts.footer')

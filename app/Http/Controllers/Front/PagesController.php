@@ -18,18 +18,9 @@ use Stichoza\GoogleTranslate\GoogleTranslate;
 
 class PagesController extends Controller
 {
-    public function index()
-    {
-        $settings = Settings::first();
-        $categories = Category::all();
-        $sliders = Slider::all();
-
-        return view('front.index', compact('settings', 'categories', 'sliders'));
-    }
-
     public function homePage()
     {
-        $slider = Slider::all();
+        $sliders = Slider::all();
         $settings = Settings::first();
         $categories = Category::all();
         $aboutUs = AboutUs::first();
@@ -38,7 +29,7 @@ class PagesController extends Controller
             ->get();
         $knoledges = Knowledge::take(4)->get();
 
-        return view('front.home', compact('slider', 'settings', 'categories', 'news', 'aboutUs', 'products', 'knoledges'));
+        return view('front.index', compact('sliders', 'settings', 'categories', 'news', 'aboutUs', 'products', 'knoledges'));
     }
 
     public function aboutUsPage()
@@ -62,6 +53,7 @@ class PagesController extends Controller
         $news = News::paginate(8);
         return view('front.news.index', compact('news'));
     }
+
     public function newsPageShow($slug)
     {
         $new = News::with('descriptions')->where('slug', $slug)->firstOrFail();
@@ -80,6 +72,7 @@ class PagesController extends Controller
         $knowledges = Knowledge::paginate(8);
         return view('front.knowledge.index', compact('knowledges'));
     }
+
     public function knowledgePageShow($slug)
     {
         $knowledge = Knowledge::where('slug', $slug)->firstOrFail();
