@@ -20,16 +20,16 @@ Table of contents
 09. footer
 
 --------------------------------------------- */
-/* 
+/*
 ---------------------------------------------
 font & reset css
---------------------------------------------- 
+---------------------------------------------
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
-/* 
+/*
 ---------------------------------------------
 reset
---------------------------------------------- 
+---------------------------------------------
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -109,10 +109,10 @@ img {
   overflow: hidden;
 }
 
-/* 
+/*
 ---------------------------------------------
 Global Styles
---------------------------------------------- 
+---------------------------------------------
 */
 html,
 body {
@@ -208,10 +208,10 @@ body {
   color: #fff;
 }
 
-/* 
+/*
 ---------------------------------------------
 Pre-loader Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .js-preloader {
@@ -310,10 +310,10 @@ Pre-loader Style
 
 
 
-/* 
+/*
 ---------------------------------------------
 Header Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .sub-header {
@@ -426,10 +426,10 @@ Header Style
   flex-basis: 100%;
   margin-top: 30px;
   justify-content: right;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  /*-webkit-transition: all 0.3s ease 0s;*/
+  /*-moz-transition: all 0.3s ease 0s;*/
+  /*-o-transition: all 0.3s ease 0s;*/
+  /*transition: all 0.3s ease 0s;*/
   position: relative;
   z-index: 999;
 }
@@ -727,45 +727,58 @@ Header Style
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
-  
+
 }
 
-/* 
+/*
 ---------------------------------------------
 Banner Style
---------------------------------------------- 
+---------------------------------------------
 */
 
-.main-banner .item {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 220px 20% 320px 20%;
-  margin-top: 0px;
+.main-banner {
+    position: relative;
 }
 
-.main-banner .item-1 {
-  background-image: url(../images/banner-01.jpg);
+.main-banner .item img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.main-banner .item-2 {
-  background-image: url(../images/banner-02.jpg);
+.main-banner .header-text {
+    position: absolute;
+    top: 50%; /* Adjust vertical positioning */
+    left: 50%; /* Adjust horizontal positioning */
+    transform: translate(-50%, -50%); /* Center the text */
+    text-align: center;
+    color: #fff;
+    z-index: 2;
 }
 
-.main-banner .item-3 {
-  background-image: url(../images/banner-03.jpg);
+.main-banner .item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay to make text more readable */
+    z-index: 1;
 }
 
 .main-banner .item span.category {
-  background-color: #fff;
-  color: #1e1e1e;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: capitalize;
-  padding: 6px 15px;
-  display: inline-block;
-  margin-bottom: 30px;
+    background-color: #fff;
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 6px 15px;
+    display: inline-block;
+    margin-bottom: 30px;
+    z-index: 2;
 }
+
 
 .main-banner .item span.category em {
   font-style: normal;
@@ -773,12 +786,11 @@ Banner Style
 }
 
 .main-banner .item h2 {
-  font-size: 62px;
+  font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
-  line-height: 72px;
-  width: 50%;
+  line-height: 40px;
   margin-bottom: 0px;
 }
 
@@ -840,10 +852,10 @@ Banner Style
 
 
 
-/* 
+/*
 ---------------------------------------------
 Featured Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .featured .left-image {
@@ -951,10 +963,10 @@ Featured Style
   font-weight: 400;
 }
 
-/* 
+/*
 ---------------------------------------------
 Video Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .video {
@@ -1001,10 +1013,10 @@ Video Style
   font-size: 18px;
 }
 
-/* 
+/*
 ---------------------------------------------
 Fun Facts Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .fun-facts {
@@ -1053,10 +1065,10 @@ Fun Facts Style
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Best Deal Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .best-deal {
@@ -1146,11 +1158,43 @@ Best Deal Style
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Properties Style
---------------------------------------------- 
+---------------------------------------------
 */
+
+.main-banner {
+    height: 100vh; /* Makes the banner fill the entire screen height */
+    position: relative;
+    overflow: hidden;
+}
+
+.main-banner .owl-banner {
+    height: 100%; /* Ensures the carousel inside the banner also fills the height */
+}
+
+.main-banner .item {
+    height: 100%; /* Makes sure each item inside the carousel fills the height */
+    position: relative;
+}
+
+.main-banner .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the full container without distortion */
+}
+
+.main-banner .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
 
 .properties .item {
   background-color: #fafafa;
@@ -1215,10 +1259,10 @@ Properties Style
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Contact Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .contact {
@@ -1332,10 +1376,10 @@ Contact Style
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Footer Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 footer.footer-no-gap {
@@ -1368,10 +1412,10 @@ footer p a:hover {
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Page Header Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .page-heading {
@@ -1406,10 +1450,10 @@ Page Header Style
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Properties Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .properties ul.properties-filter {
@@ -1482,10 +1526,10 @@ Properties Style
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Single Page Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .single-property .main-image img {
@@ -1588,10 +1632,10 @@ Single Page Style
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Contact Page Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .contact-page #map {
@@ -1692,10 +1736,10 @@ Contact Page Style
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Responsive Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 body {
