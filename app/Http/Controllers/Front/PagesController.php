@@ -22,7 +22,9 @@ class PagesController extends Controller
     {
         $settings = Settings::first();
         $categories = Category::all();
-        return view('front.index', compact('settings', 'categories'));
+        $sliders = Slider::all();
+
+        return view('front.index', compact('settings', 'categories', 'sliders'));
     }
 
     public function homePage()
