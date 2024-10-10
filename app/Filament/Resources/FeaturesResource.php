@@ -7,6 +7,7 @@ use App\Filament\Resources\FeaturesResource\RelationManagers;
 use App\Models\Features;
 use Filament\Actions\DeleteAction;
 use Filament\Forms;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -33,11 +34,10 @@ class FeaturesResource extends Resource
                     ->maxLength(255)
                     ->label(__('pages.ar_title')),
 
-                TextInput::make('en_title')
-                    ->required()
-                    ->minLength(2)
-                    ->maxLength(255)
-                    ->label(__('pages.en_title')),
+                RichEditor::make('description')
+                    ->label(__('pages.description'))
+                    ->columnSpan(2)
+                    ->placeholder(__('pages.enter_description')),
 
                 Forms\Components\FileUpload::make('image')
                     ->directory('icons/images')
@@ -89,15 +89,16 @@ class FeaturesResource extends Resource
     }
 
 
-
     public static function getNavigationGroup(): ?string
     {
         return __('pages.pages');
     }
+
     public static function getTitleCasePluralModelLabel(): string
     {
         return __('pages.features');
     }
+
     public static function getLabel(): string
     {
         return __('pages.features');

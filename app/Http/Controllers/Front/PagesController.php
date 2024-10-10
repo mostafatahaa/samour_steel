@@ -24,12 +24,13 @@ class PagesController extends Controller
         $settings = Settings::first();
         $categories = Category::all();
         $aboutUs = AboutUs::first();
+        $features = Features::all();
         $news = News::take(10)->get();
         $products = Product::select('ar_name', 'en_name', 'image', 'slug', 'is_special')->where('is_special', true)->where('status', 'active')
             ->get();
         $knoledges = Knowledge::take(4)->get();
 
-        return view('front.index', compact('sliders', 'settings', 'categories', 'news', 'aboutUs', 'products', 'knoledges'));
+        return view('front.index', compact('sliders', 'settings', 'categories', 'news', 'aboutUs', 'products', 'knoledges', 'features'));
     }
 
     public function aboutUsPage()

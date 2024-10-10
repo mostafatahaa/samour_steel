@@ -14,7 +14,7 @@ class Features extends Model
     protected $fillable = [
         'image',
         'ar_title',
-        'en_title'
+        'description'
     ];
 
     protected static function boot()
