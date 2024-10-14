@@ -210,6 +210,25 @@ body {
     color: #fff;
 }
 
+
+.all-products-button a {
+    display: inline-block;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 90px;
+    border-radius: 25px;
+    transition: all .3s;
+}
+
+.all-products-button a:hover {
+    background-color: #f35525;
+    color: #fff;
+}
+
 /*
 ---------------------------------------------
 Pre-loader Style
@@ -1277,6 +1296,7 @@ Properties Style
 
 .properties .item .main-button {
     text-align: center;
+    margin-top: 15px
 }
 
 
@@ -1921,3 +1941,5 @@ body {
         margin-right: 100px;
     }
 }
+
+
