@@ -109,8 +109,7 @@
         <div class="row">
             <div class="col-lg-4 offset-lg-4">
                 <div class="section-heading text-center">
-                    <h6>| Properties</h6>
-                    <h2>We Provide The Best Property You Like</h2>
+                    <h2>بعض من منتجاتنا</h2>
                 </div>
             </div>
         </div>
@@ -133,13 +132,14 @@
             @empty
             @endforelse
         </div>
-        <div class="col-lg-4 offset-lg-4">
+        <div class="d-flex justify-content-center">
             <div class="section-heading text-center">
                 <div class="all-products-button mt-6">
                     <a href="property-details.html">عرض جميع المنتجات</a>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 

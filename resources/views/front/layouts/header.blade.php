@@ -20,6 +20,8 @@
     <link rel="stylesheet" href={{asset('front/assets/css/owl.css')}}>
     <link rel="stylesheet" href={{asset('front/assets/css/animate.css')}}>
     <link rel="stylesheet" href={{asset('front/https://unpkg.com/swiper@7/swiper-bundle.min.css')}}>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
     <!--
 
     TemplateMo 591 villa agency
@@ -64,8 +66,10 @@
         </div>
     </div>
 </div>
-
-<!-- ***** Header Area Start ***** -->
+@php
+    $setting = \App\Models\Settings::first();
+@endphp
+    <!-- ***** Header Area Start ***** -->
 <header class="header-area header-sticky">
     <div class="container">
         <div class="row">
@@ -73,7 +77,7 @@
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html" class="logo">
-                        <h1>Villa</h1>
+                        <img class="main-logo" src="{{asset('storage/' . $setting->logo)}}">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
