@@ -17,6 +17,7 @@ return [
     'name' => 'الاسم',
     'created_at' => 'تاريخ الإنشاء',
     'category' => 'الفئة',
+    'gallery' => 'معرض الصور',
     'categories' => 'الفئات',
     'categories2' => 'فئات',
     'slug' => 'الرمز المختصر',
@@ -93,16 +94,6 @@ return [
     'inquiry' => 'الاستفسار',
     'ask_about' => 'يستفسر عن',
     'features' => 'المميزات',
-
-
-
-
-
-
-
-
-
-
 
 
 ];

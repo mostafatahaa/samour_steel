@@ -258,126 +258,34 @@
             </div>
         </div>
     </div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-12">
                 <div class="owl-carousel portfolio-slider">
                     <div class="single-pf">
-                        <img src="img/pf1.jpg" alt="#">
+                        <img src="{{asset('front/img/pf1.jpg')}}" alt="#">
                         <a href="portfolio-details.html" class="btn">View Details</a>
                     </div>
                     <div class="single-pf">
-                        <img src="img/pf2.jpg" alt="#">
+                        <img src="{{asset('front/img/pf2.jpg')}}" alt="#">
                         <a href="portfolio-details.html" class="btn">View Details</a>
                     </div>
                     <div class="single-pf">
-                        <img src="img/pf3.jpg" alt="#">
+                        <img src="{{asset('front/img/pf3.jpg')}}" alt="#">
                         <a href="portfolio-details.html" class="btn">View Details</a>
                     </div>
                     <div class="single-pf">
-                        <img src="img/pf4.jpg" alt="#">
+                        <img src="{{asset('front/img/pf4.jpg')}}" alt="#">
                         <a href="portfolio-details.html" class="btn">View Details</a>
                     </div>
-                    <div class="single-pf">
-                        <img src="img/pf1.jpg" alt="#">
-                        <a href="portfolio-details.html" class="btn">View Details</a>
-                    </div>
-                    <div class="single-pf">
-                        <img src="img/pf2.jpg" alt="#">
-                        <a href="portfolio-details.html" class="btn">View Details</a>
-                    </div>
-                    <div class="single-pf">
-                        <img src="img/pf3.jpg" alt="#">
-                        <a href="portfolio-details.html" class="btn">View Details</a>
-                    </div>
-                    <div class="single-pf">
-                        <img src="img/pf4.jpg" alt="#">
-                        <a href="portfolio-details.html" class="btn">View Details</a>
-                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!--/ End portfolio -->
-
-<!-- Start service -->
-<section class="services section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h2>We Offer Different Services To Improve Your Health</h2>
-                    <img src="img/section-img.png" alt="#">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="icofont icofont-prescription"></i>
-                    <h4><a href="service-details.html">General Treatment</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut
-                        imperdiet. </p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="icofont icofont-tooth"></i>
-                    <h4><a href="service-details.html">Teeth Whitening</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut
-                        imperdiet. </p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="icofont icofont-heart-alt"></i>
-                    <h4><a href="service-details.html">Heart Surgery</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut
-                        imperdiet. </p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="icofont icofont-listening"></i>
-                    <h4><a href="service-details.html">Ear Treatment</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut
-                        imperdiet. </p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="icofont icofont-eye-alt"></i>
-                    <h4><a href="service-details.html">Vision Problems</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut
-                        imperdiet. </p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Service -->
-                <div class="single-service">
-                    <i class="icofont icofont-blood"></i>
-                    <h4><a href="service-details.html">Blood Transfusion</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut
-                        imperdiet. </p>
-                </div>
-                <!-- End Single Service -->
-            </div>
-        </div>
-    </div>
-</section>
-<!--/ End service -->
 
 <!-- Pricing Table -->
 <section class="pricing-table section">
@@ -488,46 +396,32 @@
     </div>
 </section>
 <!-- End Blog Area -->
-
-<!-- Start clients -->
-<div class="clients overlay">
+<!-- Start portfolio -->
+<section class="portfolio section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-12">
-                <div class="owl-carousel clients-slider">
-                    <div class="single-clients">
-                        <img src="img/client1.png" alt="#">
-                    </div>
-                    <div class="single-clients">
-                        <img src="img/client2.png" alt="#">
-                    </div>
-                    <div class="single-clients">
-                        <img src="img/client3.png" alt="#">
-                    </div>
-                    <div class="single-clients">
-                        <img src="img/client4.png" alt="#">
-                    </div>
-                    <div class="single-clients">
-                        <img src="img/client5.png" alt="#">
-                    </div>
-                    <div class="single-clients">
-                        <img src="img/client1.png" alt="#">
-                    </div>
-                    <div class="single-clients">
-                        <img src="img/client2.png" alt="#">
-                    </div>
-                    <div class="single-clients">
-                        <img src="img/client3.png" alt="#">
-                    </div>
-                    <div class="single-clients">
-                        <img src="img/client4.png" alt="#">
-                    </div>
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>صور من معرض أعمالنا</h2>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!--/Ens clients -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="owl-carousel portfolio-slider">
+                    @forelse($gallery as $image)
+                        <div class="single-pf">
+                            <img class="gallery-image" src="{{asset('storage/' . $image->image)}}" alt="#">
+                        </div>
+                    @empty @endforelse
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End portfolio -->
 
 <!-- Start Appointment -->
 <section class="appointment">
