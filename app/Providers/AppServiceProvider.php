@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\AboutUs;
 use App\Models\Settings;
 use Illuminate\Support\ServiceProvider;
+
 //use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;

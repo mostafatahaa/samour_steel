@@ -1,102 +1,141 @@
-<div class="contact section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 offset-lg-4">
-                <div class="section-heading text-center">
-                    <h6>| Contact Us</h6>
-                    <h2>Get In Touch With Our Agents</h2>
+<!-- Footer Area -->
+<footer id="footer" class="footer ">
+    <!-- Footer Top -->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-footer">
+                        <h2>About Us</h2>
+                        <p>Lorem ipsum dolor sit am consectetur adipisicing elit do eiusmod tempor incididunt ut labore
+                            dolore magna.</p>
+                        <!-- Social -->
+                        <ul class="social">
+                            <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                            <li><a href="#"><i class="icofont-google-plus"></i></a></li>
+                            <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                            <li><a href="#"><i class="icofont-vimeo"></i></a></li>
+                            <li><a href="#"><i class="icofont-pinterest"></i></a></li>
+                        </ul>
+                        <!-- End Social -->
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-footer f-link">
+                        <h2>Quick Links</h2>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Cases</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-footer">
+                        <h2>Open Hours</h2>
+                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+                        <ul class="time-sidual">
+                            <li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
+                            <li class="day">Saturday <span>9.00-18.30</span></li>
+                            <li class="day">Monday - Thusday <span>9.00-15.00</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-footer">
+                        <h2>Newsletter</h2>
+                        <p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit,</p>
+                        <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+                            <input name="email" placeholder="Email Address" class="common-input"
+                                   onfocus="this.placeholder = ''"
+                                   onblur="this.placeholder = 'Your email address'" required="" type="email">
+                            <button class="button"><i class="icofont icofont-paper-plane"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<div class="contact-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7">
-                <div id="map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12469.776493332698!2d-80.14036379941481!3d25.907788681148624!2m3!1f357.26927939317244!2f20.870722720054623!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x88d9add4b4ac788f%3A0xe77469d09480fcdb!2sSunny%20Isles%20Beach!5e1!3m2!1sen!2sth!4v1642869952544!5m2!1sen!2sth"
-                        width="100%" height="500px" frameborder="0"
-                        style="border:0; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);"
-                        allowfullscreen=""></iframe>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="item phone">
-                            <img src="assets/images/phone-icon.png" alt="" style="max-width: 52px;">
-                            <h6>010-020-0340<br><span>Phone Number</span></h6>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="item email">
-                            <img src="assets/images/email-icon.png" alt="" style="max-width: 52px;">
-                            <h6>info@villa.co<br><span>Business Email</span></h6>
-                        </div>
+    <!--/ End Footer Top -->
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="copyright-content">
+                        <p>© Copyright 2018 | All Rights Reserved by <a href="https://www.wpthemesgrid.com"
+                                                                        target="_blank">wpthemesgrid.com</a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
-                <form id="contact-form" action="" method="post">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <fieldset>
-                                <label for="name">Full Name</label>
-                                <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on"
-                                       required>
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                            <fieldset>
-                                <label for="email">Email Address</label>
-                                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                       placeholder="Your E-mail..." required="">
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                            <fieldset>
-                                <label for="subject">Subject</label>
-                                <input type="subject" name="subject" id="subject" placeholder="Subject..."
-                                       autocomplete="on">
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                            <fieldset>
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                            <fieldset>
-                                <button type="submit" id="form-submit" class="orange-button">Send Message</button>
-                            </fieldset>
-                        </div>
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
-</div>
-
-<footer>
-    <div class="container">
-        <div class="col-lg-8">
-            <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
-
-                Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
-        </div>
-    </div>
+    <!--/ End Copyright -->
 </footer>
+<!--/ End Footer Area -->
 
-<!-- Scripts -->
-<!-- Bootstrap core JavaScript -->
-<script src={{asset('front/vendor/jquery/jquery.min.js')}}></script>
-<script src={{asset('front/vendor/bootstrap/js/bootstrap.min.js')}}></script>
-<script src={{asset('front/assets/js/isotope.min.js')}}></script>
-<script src={{asset('front/assets/js/owl-carousel.js')}}></script>
-<script src={{asset('front/assets/js/counter.js')}}></script>
-<script src={{asset('front/assets/js/custom.js')}}></script>
-
+<!-- jquery Min JS -->
+<script src={{asset('front/js/jquery.min.js')}}></script>
+<!-- jquery Migrate JS -->
+<script src={{asset('front/js/jquery-migrate-3.0.0.js')}}></script>
+<!-- jquery Ui JS -->
+<script src={{asset('front/js/jquery-ui.min.js')}}></script>
+<!-- Easing JS -->
+<script src={{asset('front/js/easing.js')}}></script>
+<!-- Color JS -->
+<script src={{asset('front/js/colors.js')}}></script>
+<!-- Popper JS -->
+<script src={{asset('front/js/popper.min.js')}}></script>
+<!-- Bootstrap Datepicker JS -->
+<script src={{asset('front/js/bootstrap-datepicker.js')}}></script>
+<!-- Jquery Nav JS -->
+<script src={{asset('front/js/jquery.nav.js')}}></script>
+<!-- Slicknav JS -->
+<script src={{asset('front/js/slicknav.min.js')}}></script>
+<!-- ScrollUp JS -->
+<script src={{asset('front/js/jquery.scrollUp.min.js')}}></script>
+<!-- Niceselect JS -->
+<script src={{asset('front/js/niceselect.js')}}></script>
+<!-- Tilt Jquery JS -->
+<script src={{asset('front/js/tilt.jquery.min.js')}}></script>
+<!-- Owl Carousel JS -->
+<script src={{asset('front/js/owl-carousel.js')}}></script>
+<!-- counterup JS -->
+<script src={{asset('front/js/jquery.counterup.min.js')}}></script>
+<!-- Steller JS -->
+<script src={{asset('front/js/steller.js')}}></script>
+<!-- Wow JS -->
+<script src={{asset('front/js/wow.min.js')}}></script>
+<!-- Magnific Popup JS -->
+<script src={{asset('front/js/jquery.magnific-popup.min.js')}}></script>
+<!-- Counter Up CDN JS -->
+<script src={{asset('front/http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js')}}></script>
+<!-- Bootstrap JS -->
+<script src={{asset('front/js/bootstrap.min.js')}}></script>
+<!-- Main JS -->
+<script src={{asset('front/js/main.js')}}></script>
 </body>
 </html>
