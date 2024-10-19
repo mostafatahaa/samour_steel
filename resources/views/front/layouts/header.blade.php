@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Mediplus - Free Medical and Doctor Directory HTML Template.</title>
+    <title>Samor Steel - @yield('title')</title>
 
     <!-- Favicon -->
     <link rel="icon" href="{{asset('storage/' . $settings->logo)}}">
@@ -92,17 +92,8 @@
     <div class="topbar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-5 col-12">
-                    <!-- Contact -->
-                    <ul class="top-link">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Doctors</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                    <!-- End Contact -->
-                </div>
-                <div class="col-lg-6 col-md-7 col-12">
+
+                <div class="col-lg-12 col-md-7 col-12">
                     <!-- Top Contact -->
                     <ul class="top-contact">
                         <li><i class="fa fa-phone"></i>+20 {{$settings->phone_number}}</li>

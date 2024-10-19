@@ -70,7 +70,7 @@ class GalleryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageSliders::route('/'),
+            'index' => Pages\ManageGallery::route('/'),
         ];
     }
 

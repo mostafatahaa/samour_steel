@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Filament\Resources\GalleryResource\Pages;
+namespace App\Filament\Resources\CompaniesResource\Pages;
 
+use App\Filament\Resources\CompaniesResource;
 use App\Filament\Resources\GalleryResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 
-class ManageSliders extends ManageRecords
+class ManageCompanies extends ManageRecords
 {
-    protected static string $resource = GalleryResource::class;
+    protected static string $resource = CompaniesResource::class;
 
     protected function getHeaderActions(): array
     {

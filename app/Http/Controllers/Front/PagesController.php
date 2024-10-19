@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
 use App\Models\Category;
+use App\Models\Companies;
 use App\Models\Features;
 use App\Models\Gallery;
 use App\Models\Knowledge;
@@ -27,11 +28,12 @@ class PagesController extends Controller
         $aboutUs = AboutUs::first();
         $features = Features::all();
         $gallery = Gallery::all();
+        $companies = Companies::all();
         $products = Product::with('category')->select('ar_name', 'en_name', 'image', 'slug', 'is_special', 'category_id', 'top_description_text')->where('is_special', true)->where('status', 'active')
             ->get();
         $knoledges = Knowledge::take(4)->get();
 
-        return view('front.index', compact('sliders', 'settings', 'categories', 'gallery', 'aboutUs', 'products', 'knoledges', 'features'));
+        return view('front.index', compact('sliders', 'settings', 'categories', 'gallery', 'companies', 'aboutUs', 'products', 'knoledges', 'features'));
     }
 
     public function aboutUsPage()

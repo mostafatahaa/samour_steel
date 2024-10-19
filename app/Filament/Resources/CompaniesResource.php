@@ -2,13 +2,15 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SliderResource\Pages;
-use App\Filament\Resources\SliderResource\RelationManagers;
+use App\Filament\Resources\CompaniesResource\Pages;
+
+//use App\Filament\Resources\GalleryResource\RelationManagers;
+use App\Models\Companies;
+use App\Models\Gallery;
 use App\Models\Settings;
 use App\Models\Slider;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -20,9 +22,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class SliderResource extends Resource
+class CompaniesResource extends Resource
 {
-    protected static ?string $model = Slider::class;
+    protected static ?string $model = Companies::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-photo';
 
@@ -30,21 +32,15 @@ class SliderResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('title')
+                TextInput::make('name')
                     ->required()
                     ->minLength(2)
-                    ->maxLength(255)
-                    ->label(__('pages.title')),
+                    ->maxLength(255),
 
-                RichEditor::make('description')
-                    ->label(__('pages.description'))
-                    ->columnSpan(2)
-                    ->placeholder(__('pages.enter_description')),
-
-                FileUpload::make('images')
+                FileUpload::make('image')
                     ->downloadable()
                     ->required()
-                    ->directory('slider')
+                    ->directory('gallery')
                     ->visibility('public')
                     ->disk('public')
                     ->columnSpanFull()
@@ -58,7 +54,8 @@ class SliderResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('images')->label(__('pages.image'))->size(70, 70),
+                ImageColumn::make('image')->label(__('pages.image'))->size(70, 70),
+                TextColumn::make('name')->sortable()->searchable()->label(__('pages.name')),
                 TextColumn::make('created_at')->sortable()->date()->label(__('pages.created_at')),
 
 
@@ -80,23 +77,23 @@ class SliderResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageSliders::route('/'),
+            'index' => Pages\ManageCompanies::route('/'),
         ];
     }
 
     public static function getNavigationGroup(): ?string
     {
-        return __('pages.settings');
+        return __('pages.pages');
     }
 
     public static function getTitleCasePluralModelLabel(): string
     {
-        return __('pages.slider');
+        return __('pages.companies');
     }
 
     public static function getPluralLabel(): ?string
     {
-        return __('pages.slider');
+        return __('pages.companies');
     }
 
     public static function getModelLabel(): string

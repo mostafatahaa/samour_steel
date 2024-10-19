@@ -76,35 +76,30 @@ class SettingsResource extends Resource
                 ]),
 
                 TextInput::make('facebook')
-
                     ->minLength(2)
                     ->url()
                     ->suffixIcon('heroicon-m-globe-alt')
                     ->label(__('pages.facebook')),
 
                 TextInput::make('twitter')
-
                     ->minLength(2)
                     ->url()
                     ->suffixIcon('heroicon-m-globe-alt')
                     ->label(__('pages.twitter')),
 
                 TextInput::make('tiktok')
-
                     ->minLength(2)
                     ->url()
                     ->suffixIcon('heroicon-m-globe-alt')
                     ->label(__('pages.tiktok')),
 
                 TextInput::make('linkedin')
-
                     ->minLength(2)
                     ->url()
                     ->suffixIcon('heroicon-m-globe-alt')
                     ->label(__('pages.linkedin')),
 
                 TextInput::make('instegram')
-
                     ->minLength(2)
                     ->url()
                     ->suffixIcon('heroicon-m-globe-alt')
@@ -132,14 +127,14 @@ class SettingsResource extends Resource
                     ->label(__('pages.logo'))
                     ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/svg+xml', 'image/tiff']),
 
-                FileUpload::make('qr_image')
+                FileUpload::make('footer_logo')
                     ->downloadable()
                     ->required()
-                    ->directory('settings/qr')
+                    ->directory('settings/logo')
                     ->visibility('public')
                     ->disk('public')
                     ->columnSpanFull()
-                    ->label(__('pages.qr_image'))
+                    ->label(__('pages.footer_logo'))
                     ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/svg+xml', 'image/tiff']),
 
                 FileUpload::make('home_banner')
@@ -193,11 +188,11 @@ class SettingsResource extends Resource
     }
 
 
-
     public static function getNavigationGroup(): ?string
     {
         return __('pages.settings');
     }
+
     public static function getTitleCasePluralModelLabel(): string
     {
         return __('pages.general_settings');
