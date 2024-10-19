@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
 //            $switch
 //                ->locales(['ar', 'en']);
 //        });
-        Paginator::useBootstrapFour();
+        Paginator::useBootstrapFive();
 
         View::composer('*', function ($view) {
             $aboutUs = AboutUs::with('images')->first();

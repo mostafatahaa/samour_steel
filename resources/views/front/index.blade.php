@@ -277,6 +277,15 @@
             <!-- End Single Table-->
         </div>
     </div>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <div class="section-title">
+                    <a class="btn" href="#">عرض جميع المنتجات</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!--/ End Pricing Table -->
 

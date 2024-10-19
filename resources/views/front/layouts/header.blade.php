@@ -126,9 +126,12 @@
                         <div class="main-menu">
                             <nav class="navigation">
                                 <ul class="nav menu">
-                                    <li class="active"><a href="#">الرئيسية</a>
+                                    <li class="{{Route::currentRouteName() == 'home' ? 'active' : ''}}"><a
+                                            href="{{route('home')}}">الرئيسية</a>
                                     </li>
-                                    <li><a href="#">المنتجات </a></li>
+                                    <li class="{{Route::currentRouteName() == 'products.index' ? 'active' : ''}}">
+                                        <a
+                                            href="{{route('products.index')}}">المنتجات </a></li>
                                     <li><a href="#">من نحن </a></li>
                                     <li><a href="#">معرض الصور</a></li>
                                     <li><a href="">تواصل معنا</a></li>

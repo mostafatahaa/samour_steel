@@ -13,12 +13,12 @@ class ProductsController extends Controller
     {
         $products = Product::where('status', 'active')->paginate(8);
         $categories = Category::all();
-        return view('front.products.index', compact('products', 'categories'));
+        return view('front.products', compact('products', 'categories'));
     }
 
     public function category($slug)
     {
-        $category  = Category::where('slug', $slug)->firstOrFail();
+        $category = Category::where('slug', $slug)->firstOrFail();
         $products = Product::where('status', 'active')->where('category_id', $category->id)->paginate(8);
         return view('front.products.category', compact('products', 'category'));
     }
