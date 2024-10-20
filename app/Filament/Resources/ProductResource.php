@@ -46,13 +46,6 @@ class ProductResource extends Resource
                     ->maxLength(255)
                     ->label(__('pages.ar_name')),
 
-
-                TextInput::make('en_name')
-                    ->minLength(2)
-                    ->required()
-                    ->maxLength(255)
-                    ->label(__('pages.en_name')),
-
                 Select::make('category_id')
                     ->required()
                     ->label(__('pages.category'))
@@ -77,7 +70,7 @@ class ProductResource extends Resource
                     ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/svg+xml', 'image/tiff']),
 
 
-                RichEditor::make('top_description_text')
+                RichEditor::make('description')
                     ->label(__('pages.description'))
                     ->columnSpan(2)
                     ->placeholder(__('pages.enter_description')),
@@ -87,35 +80,6 @@ class ProductResource extends Resource
                     ->offColor('danger')
                     ->label(__('pages.added_to_home_page'))
                     ->default(0)->columnSpanFull(),
-
-                Forms\Components\Repeater::make('description')
-                    ->relationship('descriptions') // Define the relationship method
-                    ->schema([
-
-                        TextInput::make('title')
-                            ->minLength(2)
-                            ->maxLength(255)
-                            ->label(__('pages.title')),
-
-                        RichEditor::make('description')
-                            ->label(__('pages.description'))
-                            ->columnSpan(2)
-                            ->placeholder(__('pages.enter_description')),
-
-                        Forms\Components\FileUpload::make('image')
-                            ->directory('products/images')
-                            ->downloadable()
-                            ->visibility('public')
-                            ->disk('public')
-                            ->label(__('pages.image'))
-                            ->deletable()
-                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/svg+xml', 'image/tiff']),
-                    ])
-                    ->addActionLabel(__('pages.add_more')) // Label for the repeater
-                    ->label(__('pages.additional_data'))
-                    ->columnSpan(2)
-                    ->defaultItems(1)
-                    ->collapsible(),
 
                 Forms\Components\Repeater::make('images')
                     ->relationship('images') // Define the relationship method

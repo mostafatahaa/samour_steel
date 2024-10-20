@@ -29,7 +29,7 @@ class PagesController extends Controller
         $features = Features::all();
         $gallery = Gallery::all();
         $companies = Companies::all();
-        $products = Product::with('category')->select('ar_name', 'en_name', 'image', 'slug', 'is_special', 'category_id', 'top_description_text')->where('is_special', true)->where('status', 'active')
+        $products = Product::with('category')->select('ar_name', 'image', 'slug', 'is_special', 'category_id', 'description')->where('is_special', true)->where('status', 'active')
             ->get();
         $knoledges = Knowledge::take(4)->get();
 

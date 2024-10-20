@@ -14,18 +14,15 @@ use Illuminate\Support\Str;
 class Product extends Model
 {
     use HasFactory;
-    protected $fillable = ['ar_name', 'en_name', 'slug', 'top_description_text', 'end_description_tex', 'image', 'is_special', 'category_id', 'status'];
+
+    protected $fillable = ['ar_name', 'en_name', 'slug', 'description', 'image', 'is_special', 'category_id', 'status'];
     protected $casts = [
         'is_special' => 'boolean',
     ];
+
     public function images()
     {
         return $this->hasMany(ProductImage::class, 'product_id', 'id');
-    }
-
-    public function descriptions()
-    {
-        return $this->hasMany(ProductDescriptions::class, 'product_id', 'id');
     }
 
     public function category()
@@ -38,11 +35,11 @@ class Product extends Model
         parent::boot();
 
         static::creating(function ($product) {
-            $product->slug = Str::slug($product->en_name . '-' . now()->timestamp);
+            $product->slug = str_replace(' ', '-', $product->ar_name . '-' . now()->timestamp);
         });
 
         static::updating(function ($product) {
-            $product->slug = Str::slug($product->en_name . '-' . now()->timestamp);
+            $product->slug = str_replace(' ', '-', $product->ar_name . '-' . now()->timestamp);
         });
 
 

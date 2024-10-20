@@ -34,8 +34,7 @@ Route::middleware('lang')->group(function () {
 
     Route::controller(ProductsController::class)->group(function () {
         Route::get('products', 'index')->name('products.index');
-        Route::get('category/{slug}', 'category')->name('products.category');
-        Route::get('products/{slug}', 'show')->name('products.show');
+        Route::get('products/{slug}', 'show')->name('product.show');
         Route::get('search', 'search')->name('product.search');
     });
 

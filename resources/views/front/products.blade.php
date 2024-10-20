@@ -13,16 +13,18 @@
                     <div class="single-table">
                         <!-- Table Head -->
                         <div class="table-head">
-                            <div>
-                                <img class="product-image" src="{{asset('storage/' . $product->image)}}">
-                            </div>
+                            <a href="{{route('product.show', $product->slug)}}">
+                                <div>
+                                    <img class="product-image" src="{{asset('storage/' . $product->image)}}">
+                                </div>
+                            </a>
                             <h4 class="title">{{$product->name}}</h4>
                             <div class="price">
-                                <p>{!! Str::limit(strip_tags($product->top_description_text, 50))!!}</p>
+                                <p>{!! Str::limit(strip_tags($product->description, 50))!!}</p>
                             </div>
                         </div>
                         <div class="table-bottom">
-                            <a class="btn" href="#">مشاهدة</a>
+                            <a class="btn" href="{{route('product.show', $product->slug)}}">مشاهدة</a>
                         </div>
                         <!-- Table Bottom -->
                     </div>

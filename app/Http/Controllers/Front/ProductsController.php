@@ -26,23 +26,8 @@ class ProductsController extends Controller
     public function show($slug)
     {
         $product = Product::with('images')->where('slug', $slug)->firstOrFail();
-
-        $products = Product::where('category_id', $product->category_id)
-            ->where('status', 'active')
-            ->orderBy('id')
-            ->take(12)
-            ->get();
-
-        $productArray = $products->toArray();
-
-        $currentIndex = collect($productArray)->search(function ($item) use ($product) {
-            return $item['id'] == $product->id;
-        });
-
-        $previousProduct = $currentIndex > 0 ? $products[$currentIndex - 1] : null;
-        $nextProduct = $currentIndex < count($productArray) - 1 ? $products[$currentIndex + 1] : null;
-
-        return view('front.products.show', compact('product', 'products', 'previousProduct', 'nextProduct'));
+        
+        return view('front.product_details', compact('product'));
     }
 
     public function search(Request $request)
