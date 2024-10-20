@@ -46,10 +46,10 @@ class PagesController extends Controller
         return view('front.about_us', compact('aboutUsData', 'translate', 'features'));
     }
 
-    public function whyChooseUsPage()
+    public function galleryPage()
     {
-        $data = whyChooseUsData::all();
-        return view('front.why_choose_us', compact('data'));
+        $gallery = Gallery::paginate();
+        return view('front.gallery', compact('gallery'));
     }
 
     public function newsPage()

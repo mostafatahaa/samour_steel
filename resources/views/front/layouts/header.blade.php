@@ -133,7 +133,9 @@
                                         <a
                                             href="{{route('products.index')}}">المنتجات </a></li>
                                     <li><a href="#">من نحن </a></li>
-                                    <li><a href="#">معرض الصور</a></li>
+                                    <li class="{{Route::currentRouteName() == 'gallery' ? 'active' : ''}}"><a
+                                            href="{{route('gallery')}}">معرض
+                                            الصور</a></li>
                                     <li><a href="">تواصل معنا</a></li>
                                 </ul>
                             </nav>
