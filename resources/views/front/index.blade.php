@@ -13,6 +13,9 @@
         @forelse($sliders as $slider)
             <!-- Start Single Slider -->
             <div class="single-slider" style="background-image:url({{asset('storage/' . $slider->images)}})">
+                <div class="overlay"
+                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -20,8 +23,8 @@
                                 <h1>{{$slider->title}}</h1>
                                 <p>{!! Str::limit(strip_tags($slider->description),500)!!} </p>
                                 <div class="button text-center">
-                                    <a href="#" class="btn">مشاهدة منتجاتنا</a>
-                                    <a href="#" class="btn primary">معرفة المزيد</a>
+                                    <a href="{{route('products.index')}}" class="btn">مشاهدة منتجاتنا</a>
+                                    <a href="{{route('about_us')}}" class="btn primary">معرفة المزيد</a>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +54,7 @@
                                 <h4>الجودة أولاً</h4>
                                 <p>نلتزم بتقديم أفضل المنتجات والخدمات التي تتميز بأعلى معايير الجودة، لأننا نؤمن بأن
                                     جودة العمل تحدد مدى نجاح المشاريع.</p>
-                                <a href="#">معرفة المزيد<i class="fa fa-long-arrow-right"></i></a>
+                                <a href="{{route('about_us')}}">معرفة المزيد<i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -67,7 +70,7 @@
                                 <h4>التميز في الأداء</h4>
                                 <p>كل منتج وخدمة نقدمها يعكس التفاني الذي نبذله لضمان التفوق، مما يساعدك على إنجاز
                                     مشاريعك بكفاءة ونجاح.</p>
-                                <a href="#">معرفة المزيد<i class="fa fa-long-arrow-right"></i></a>
+                                <a href="{{route('about_us')}}">معرفة المزيد<i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -83,7 +86,7 @@
                                 <h4>تقنيات حديثة</h4>
                                 <p>نستخدم أحدث الأدوات والتقنيات لضمان تقديم خدمات ذات كفاءة عالية، تساعدك على البقاء في
                                     مقدمة السوق.</p>
-                                <a href="#">معرفة المزيد<i class="fa fa-long-arrow-right"></i></a>
+                                <a href="{{route('about_us')}}">معرفة المزيد<i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -231,7 +234,8 @@
                 <div class="content">
                     <h2>تواصل معنا - اطرح استفساراتك وسنكون هنا لتقديم الدعم اللازم</h2>
                     <div class="button">
-                        <a href="#" class="btn second mt-5">للتواصل<i class="fa fa-long-arrow-right"></i></a>
+                        <a href="{{route('contactus')}}" class="btn second mt-5">للتواصل<i
+                                class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>

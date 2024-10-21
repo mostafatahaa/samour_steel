@@ -48,7 +48,7 @@
 
 </head>
 <body>
-<a href="https://wa.me/{{$settings->phone_number}}?text=hello+123" target=”_blank” class="whatsapp-btn">
+<a href="https://wa.me/{{$settings->phone_number}}?text=أرغب في الاستفسار بخصوص" target=”_blank” class="whatsapp-btn">
     <i class="fa fa-whatsapp"></i>
 </a>
 
@@ -96,8 +96,14 @@
                 <div class="col-lg-12 col-md-7 col-12">
                     <!-- Top Contact -->
                     <ul class="top-contact">
-                        <li><i class="fa fa-phone"></i>+20 {{$settings->phone_number}}</li>
-                        <li><i class="fa fa-envelope"></i><a href="mailto:{{$settings->email}}">{{$settings->email}}</a>
+
+                        <li>
+                            <a href="tel:{{$settings->phone_number}}">
+                                <i class="fa fa-phone"></i>
+                                +{{$settings->phone_number}}
+                        </li>
+                        <li><i class="fa fa-envelope ml-2"></i><a
+                                href="mailto:{{$settings->email}}">{{$settings->email}}</a>
                         </li>
                     </ul>
                     <!-- End Top Contact -->
@@ -114,7 +120,9 @@
                     <div class="col-lg-3 col-md-3 col-12 mb-15">
                         <!-- Start Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="{{asset('storage/' . $settings->logo)}}" alt="#"></a>
+                            <a href="{{route('home')}}"><img style="margin-bottom: 13px"
+                                                             src="{{asset('storage/' . $settings->logo)}}"
+                                                             alt="logo"></a>
                         </div>
                         <!-- End Logo -->
                         <!-- Mobile Nav -->
