@@ -13,7 +13,7 @@ class ContactUsController extends Controller
     public function index()
     {
         $settings = Settings::first();
-        return view('front.contactus', compact('settings'));
+        return view('front.contact_us', compact('settings'));
     }
 
     public function inquiry()
@@ -21,7 +21,6 @@ class ContactUsController extends Controller
         $settings = Settings::first();
         return view('front.inquiry', compact('settings'));
     }
-
 
 
     public function store(Request $request)

@@ -11,16 +11,12 @@ use App\Models\AboutUsMoreDetails;
 class AboutUs extends Model
 {
     use HasFactory;
-    protected $fillable = ['ar_title', 'description', 'en_title'];
+
+    protected $fillable = ['ar_title', 'description'];
 
     public function images()
     {
         return $this->hasMany(AboutUsData::class, 'about_us_id', 'id');
-    }
-
-    public function moreDetails()
-    {
-        return $this->hasMany(AboutUsMoreDetails::class, 'about_us_id', 'id');
     }
 
     public function getTitleAttribute()

@@ -21,15 +21,8 @@ Route::middleware('lang')->group(function () {
 
     Route::controller(PagesController::class)->group(function () {
         Route::get('/', 'homePage')->name('home');
-        Route::get('/why-choose-us', 'whyChooseUsPage')->name('why_choose_us');
         Route::get('/about-us', 'aboutUsPage')->name('about_us');
-        Route::get('/test', 'makeMoyasarPayment')->name('about_us');
-
-        Route::get('/news', 'newsPage')->name('news.index');
-        Route::get('/news/{slug}', 'newsPageShow')->name('news.show');
-
         Route::get('/gallery', 'galleryPage')->name('gallery');
-        Route::get('/knowledge/{slug}', 'knowledgePageShow')->name('knowledge.show');
     });
 
 

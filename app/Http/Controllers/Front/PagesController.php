@@ -39,11 +39,10 @@ class PagesController extends Controller
     public function aboutUsPage()
     {
 
-        $aboutUsData = AboutUs::with('images', 'moreDetails')->get();
-        $translate = new GoogleTranslate('en');
-        $features = Features::all();
+        $aboutUsData = AboutUs::with('images')->get();
 
-        return view('front.about_us', compact('aboutUsData', 'translate', 'features'));
+
+        return view('front.about_us', compact('aboutUsData'));
     }
 
     public function galleryPage()

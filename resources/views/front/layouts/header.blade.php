@@ -132,11 +132,13 @@
                                     <li class="{{Route::currentRouteName() == 'products.index' ? 'active' : ''}}">
                                         <a
                                             href="{{route('products.index')}}">المنتجات </a></li>
-                                    <li><a href="#">من نحن </a></li>
+                                    <li class="{{Route::currentRouteName() == 'about_us' ? 'active' : ''}}"><a
+                                            href="{{route('about_us')}}">من نحن </a></li>
                                     <li class="{{Route::currentRouteName() == 'gallery' ? 'active' : ''}}"><a
                                             href="{{route('gallery')}}">معرض
                                             الصور</a></li>
-                                    <li><a href="">تواصل معنا</a></li>
+                                    <li class="{{Route::currentRouteName() == 'contactus' ? 'active' : ''}}"><a
+                                            href="{{route('contactus')}}">تواصل معنا</a></li>
                                 </ul>
                             </nav>
                         </div>

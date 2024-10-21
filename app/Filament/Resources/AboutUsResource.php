@@ -37,12 +37,6 @@ class AboutUsResource extends Resource
                     ->maxLength(255)
                     ->label(__('pages.ar_title')),
 
-                TextInput::make('en_title')
-                    ->required()
-                    ->minLength(2)
-                    ->maxLength(255)
-                    ->label(__('pages.en_title')),
-
                 RichEditor::make('description')
                     ->label(__('pages.description'))
                     ->columnSpan(2)
@@ -62,56 +56,13 @@ class AboutUsResource extends Resource
                             ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/svg+xml', 'image/tiff']),
                     ])
                     ->addActionLabel(__('pages.add_more')) // Label for the repeater
-                    ->label(__('pages.additional_images'))
+                    ->label(__('pages.image'))
                     ->columnSpan(2)
                     ->defaultItems(1)
                     ->collapsible(),
-
-                Forms\Components\Repeater::make('moreDetails')
-                    ->relationship('moreDetails') // Define the relationship method
-                    ->schema([
-                        TextInput::make('ar_title')
-                            ->required()
-                            ->minLength(2)
-                            ->maxLength(255)
-                            ->columnSpanFull()
-                            ->label(__('pages.ar_title')),
-
-                        TextInput::make('en_title')
-                            ->required()
-                            ->minLength(2)
-                            ->maxLength(255)
-                            ->columnSpanFull()
-                            ->label(__('pages.en_title')),
-
-                        RichEditor::make('description')
-                            ->label(__('pages.description'))
-                            ->columnSpan(2)
-                            ->required()
-                            ->placeholder(__('pages.enter_description')),
-
-                        Forms\Components\FileUpload::make('image')
-                            ->directory('products/images')
-                            ->downloadable()
-                            ->visibility('public')
-                            ->disk('public')
-                            ->columnSpanFull()
-                            ->label(__('pages.image'))
-                            ->deletable()
-                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/svg+xml', 'image/tiff']),
-                    ])
-                    ->addActionLabel(__('pages.add_more')) // Label for the repeater
-                    ->label(__('pages.additional_data'))
-                    ->columnSpan(2)
-                    ->defaultItems(1)
-                    ->collapsible(),
-
 
             ]);
     }
-
-
-
 
 
     public static function table(Table $table): Table
@@ -122,7 +73,6 @@ class AboutUsResource extends Resource
                 TextColumn::make('ar_title')->label(__('pages.title')),
             ])
             ->paginated(false)
-
             ->filters([
                 //
             ])
@@ -138,7 +88,6 @@ class AboutUsResource extends Resource
     }
 
 
-
     public static function getPages(): array
     {
         return [
@@ -150,10 +99,12 @@ class AboutUsResource extends Resource
     {
         return __('pages.pages');
     }
+
     public static function getTitleCasePluralModelLabel(): string
     {
         return __('pages.about_us');
     }
+
     public static function getLabel(): string
     {
         return __('pages.about_us');
