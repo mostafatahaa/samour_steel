@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="col-lg-8 col-md-8 col-12 mt-3 text-center">
                                 <img src="{{asset('storage/' . $settings->footer_logo)}}">
-                                <p>شركة سمور استيل لتشغيل المعادن وصناعة خطوط الإنتاج والصناعات الثقيلة</p>
+                                <p>{{$settings->campany_name}}</p>
                             </div>
                         </div>
 
@@ -25,13 +25,16 @@
                         <div class="row">
                             <div class="col-lg-8 col-md-8 col-12">
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>الرئيسية</a>
+                                    <li><a href="{{route('home')}}"><i class="fa fa-caret-right" aria-hidden="true"></i>الرئيسية</a>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>من نحن</a>
+                                    <li><a href="{{route('about_us')}}"><i class="fa fa-caret-right"
+                                                                           aria-hidden="true"></i>من نحن</a>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>معرض الصور</a>
+                                    <li><a href="{{route('gallery')}}"><i class="fa fa-caret-right"
+                                                                          aria-hidden="true"></i>معرض الصور</a>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>تواصل معنا</a>
+                                    <li><a href="{{route('contactus')}}"><i class="fa fa-caret-right"
+                                                                            aria-hidden="true"></i>تواصل معنا</a>
                                     </li>
                                     <li><a href="{{route('products.index')}}"><i class="fa fa-caret-right"
                                                                                  aria-hidden="true"></i>المنتجات</a>
@@ -118,5 +121,15 @@
 <script src={{asset('front/js/bootstrap.min.js')}}></script>
 <!-- Main JS -->
 <script src={{asset('front/js/main.js')}}></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+    @if(session('success'))
+    toastr.success('{{ session('success') }}');
+    @endif
+</script>
 </body>
 </html>

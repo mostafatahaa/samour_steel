@@ -14,8 +14,8 @@
                 <div class="col-lg-4 col-md-12 col-12">
                     <div class="single-table">
                         <div class="table-head">
-                            <a href="#" data-fancybox="gallery">
-                                <img data-fancybox="gallery" class="product-image gallery-image"
+                            <a href="{{ asset('storage/' . $image->image) }}" data-fancybox="gallery">
+                                <img class="product-image gallery-image"
                                      src="{{ asset('storage/' . $image->image) }}" alt="Image" loading="lazy">
                             </a>
                         </div>
@@ -42,7 +42,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         Fancybox.bind("[data-fancybox='gallery']", {
-            infinite: false,
+            infinite: true,
             preload: 2,
             buttons: ["zoom", "slideShow", "fullScreen", "download", "close"],
         });

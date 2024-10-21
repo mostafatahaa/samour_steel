@@ -105,11 +105,30 @@ class SettingsResource extends Resource
                     ->suffixIcon('heroicon-m-globe-alt')
                     ->label(__('pages.instegram')),
 
-                TextInput::make('youtube')
-                    ->minLength(2)
-                    ->url()
-                    ->suffixIcon('heroicon-m-globe-alt')
-                    ->label(__('pages.youtube')),
+                TextInput::make('years_of_exp')
+                    ->numeric()
+                    ->label(__('pages.years_of_exp')),
+
+                TextInput::make('num_of_clients')
+                    ->numeric()
+                    ->label(__('pages.num_of_clients')),
+
+                TextInput::make('num_of_projects')
+                    ->numeric()
+                    ->label(__('pages.num_of_projects')),
+
+                TextInput::make('num_of_machines')
+                    ->numeric()
+                    ->label(__('pages.num_of_machines')),
+
+                FileUpload::make('youtube')
+                    ->downloadable()
+                    ->required()
+                    ->directory('settings/logo')
+                    ->visibility('public')
+                    ->disk('public')
+                    ->columnSpanFull()
+                    ->label(__('pages.youtube_video')),
 
 
                 RichEditor::make('inquireies_description')

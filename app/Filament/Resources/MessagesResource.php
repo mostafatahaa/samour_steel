@@ -28,7 +28,7 @@ class MessagesResource extends Resource
 
     public static function getNavigationBadge(): ?string
     {
-        return static::getModel()::where('is_read',  NULL)->count();
+        return static::getModel()::where('is_read', NULL)->count();
     }
 
     public static function form(Form $form): Form
@@ -36,8 +36,8 @@ class MessagesResource extends Resource
 
         return $form
             ->schema([
-                TextInput::make('company_name')
-                    ->label(__('pages.company_name'))
+                TextInput::make('name')
+                    ->label(__('pages.name'))
                     ->columnSpanFull(),
                 TextInput::make('email')
                     ->label(__('pages.email'))
@@ -50,21 +50,6 @@ class MessagesResource extends Resource
                     ->label(__('pages.message'))
                     ->columnSpanFull(),
 
-                Repeater::make('products')
-                    ->relationship('products') // Assuming 'products' is a relation on the model you're editing
-                    ->columnSpanFull()
-
-                    ->schema([
-                        // Assuming 'products' relation returns a collection of Product models
-                        Select::make('product_id')
-                            ->label(__('pages.ask_about'))
-                            ->relationship('products', 'ar_name') // 'category' is the relationship on the Product model
-                            ->columnSpanFull(),
-
-
-                    ])
-                    ->label(__('pages.product'))
-                    ->collapsed(false)
             ]);
     }
 
@@ -72,7 +57,7 @@ class MessagesResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('company_name')->sortable()->searchable()->label(__('pages.company_name')),
+                TextColumn::make('name')->sortable()->searchable()->label(__('pages.name')),
                 TextColumn::make('phone')->label(__('pages.phone'))->searchable(),
                 TextColumn::make('email')->label(__('pages.email'))->searchable(),
                 TextColumn::make('description')->label(__('pages.message'))->limit(50),
@@ -109,6 +94,7 @@ class MessagesResource extends Resource
     {
         return __('pages.messages');
     }
+
     public static function getTitleCasePluralModelLabel(): string
     {
         return __('pages.messages');

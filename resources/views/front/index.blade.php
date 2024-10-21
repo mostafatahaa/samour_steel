@@ -138,7 +138,7 @@
                 <div class="single-fun">
                     <i class="fa fa-industry"></i>
                     <div class="content">
-                        <span class="counter">3468</span>
+                        <span class="counter">{{$settings->num_of_projects}}</span>
                         <p>مشاريع تم تجهيزها</p>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                 <div class="single-fun">
                     <i class="fa fa-cogs"></i>
                     <div class="content">
-                        <span class="counter">3468</span>
+                        <span class="counter">{{$settings->num_of_machines}}</span>
                         <p>ماكينات تمت صناعتها</p>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                 <div class="single-fun">
                     <i class="icofont icofont-user-alt-3"></i>
                     <div class="content">
-                        <span class="counter">557</span>
+                        <span class="counter">{{$settings->num_of_clients}}</span>
                         <p>عملائنا الحاليين</p>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                 <div class="single-fun">
                     <i class="icofont icofont-table"></i>
                     <div class="content">
-                        <span class="counter">32</span>
+                        <span class="counter">{{$settings->years_of_exp}}</span>
                         <p>سنوات الخبره</p>
                     </div>
                 </div>
@@ -215,10 +215,11 @@
                             </div>
                         </div>
                         <!--/ End Video Animation -->
-                        <a href="https://www.youtube.com/watch?v=RFVXy6CRVR4" class="video video-popup mfp-iframe"><i
+                        <a href="{{asset('storage/' . $settings->youtube)}}" class="video video-popup mfp-iframe"><i
                                 class="fa fa-play"></i></a>
                     </div>
                 </div>
+                <script></script>
                 <!-- End Choose Rights -->
             </div>
         </div>
@@ -362,32 +363,37 @@
         </div>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
-                <form class="form" action="#">
+                <form class="form" method="post" action="{{route('contactus.store')}}">
+                    @csrf
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="form-group">
-                                <input name="name" type="text" placeholder="الاسم بالكامل">
+                                <input style="direction: rtl;" name="name" type="text" placeholder="الاسم بالكامل"
+                                       required>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="form-group">
-                                <input name="email" type="email" placeholder="البريد الإلكتروني">
+                                <input style="direction: rtl;" name="email" type="email" placeholder="البريد الإلكتروني"
+                                       required>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-12 col-md-12 col-12">
                             <div class="form-group">
-                                <input name="phone" type="text" placeholder="رقم الهاتف">
+                                <input style="direction: rtl;" name="phone" type="number" placeholder="رقم الهاتف"
+                                       required>
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-12">
                             <div class="form-group">
-                                <textarea name="message" placeholder="اكتب استفسارك هنا"></textarea>
+                                <textarea style="direction: rtl;" name="description" placeholder="اكتب استفسارك هنا"
+                                          required></textarea>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-5 col-md-4 col-12">
+                    <div style="direction: rtl;" class="row">
+                        <div class="col-lg-5 col-md-4 col-12" style="text-align-last: right;">
                             <div class="form-group">
                                 <div class="button">
                                     <button type="submit" class="btn">إرسال</button>

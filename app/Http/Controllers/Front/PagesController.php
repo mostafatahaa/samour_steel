@@ -27,7 +27,7 @@ class PagesController extends Controller
         $categories = Category::all();
         $aboutUs = AboutUs::first();
         $features = Features::all();
-        $gallery = Gallery::all();
+        $gallery = Gallery::paginate();
         $companies = Companies::all();
         $products = Product::with('category')->select('ar_name', 'image', 'slug', 'is_special', 'category_id', 'description')->where('is_special', true)->where('status', 'active')
             ->get();

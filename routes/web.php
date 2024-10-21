@@ -34,7 +34,6 @@ Route::middleware('lang')->group(function () {
 
     Route::controller(ContactUsController::class)->group(function () {
         Route::get('contact-us', 'index')->name('contactus');
-        Route::get('inquiry', 'inquiry')->name('inquiry');
         Route::post('contact-us/store', 'store')->name('contactus.store');
         Route::get('thanks-message', 'successRedirect')->name('thanks');
     });

@@ -83,7 +83,7 @@ class CompaniesResource extends Resource
 
     public static function getNavigationGroup(): ?string
     {
-        return __('pages.pages');
+        return __('pages.sections');
     }
 
     public static function getTitleCasePluralModelLabel(): string

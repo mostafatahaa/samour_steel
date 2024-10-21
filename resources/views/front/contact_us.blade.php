@@ -22,31 +22,34 @@
                         <h2>تواصل معنا</h2>
                         <p>إذا كان لديك أي أسئلة، لا تتردد في التواصل معنا.</p>
                         <!-- Form -->
-                        <form class="form" method="post" action="mail/mail.php">
+                        <form class="form" method="post" action="{{route('contactus.store')}}">
+                            @csrf
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="text" name="name" style="direction: rtl;" placeholder="الاسم"
-                                               required="">
+                                        <input type="text" name="name" style="direction: rtl;"
+                                               placeholder="الاسم"
+                                               required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <input type="email" name="email" style="direction: rtl;"
-                                               placeholder="البريد الإلكتروني" required="">
+                                               placeholder="البريد الإلكتروني" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="text" name="phone" style="direction: rtl;" placeholder="رقم الهاتف"
-                                               required="">
+                                        <input type="number" name="phone" style="direction: rtl;"
+                                               placeholder="رقم الهاتف"
+                                               required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <textarea name="message" style="direction: rtl;"
+                                        <textarea name="description" style="direction: rtl;"
                                                   placeholder="أكتب رسالتك هنا..."
-                                                  required=""></textarea>
+                                                  required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">

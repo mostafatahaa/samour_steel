@@ -33,5 +33,24 @@
     <!-- End Portfolio Details Area -->
 @empty
 @endforelse
-
+<div class="col-lg-6 col-12">
+    <!-- Start Choose Rights -->
+    <div class="choose-right">
+        <div class="video-image">
+            <!-- Video Animation -->
+            <div class="promo-video">
+                <div class="waves-block">
+                    <div class="waves wave-1"></div>
+                    <div class="waves wave-2"></div>
+                    <div class="waves wave-3"></div>
+                </div>
+            </div>
+            <!--/ End Video Animation -->
+            <a href="{{asset('storage/' . $settings->youtube)}}" class="video video-popup mfp-iframe"><i
+                    class="fa fa-play"></i></a>
+        </div>
+    </div>
+    <script></script>
+    <!-- End Choose Rights -->
+</div>
 @include('front.layouts.footer')

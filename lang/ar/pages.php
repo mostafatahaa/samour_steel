@@ -14,6 +14,7 @@ return [
     'end_description' => 'الوصف النهائي',
     'image' => 'الصورة',
     'images' => 'الصور',
+    'sections' => 'الأقسام',
     'footer_logo' => 'اللوجو أسفل الموقع',
     'name' => 'الاسم',
     'created_at' => 'تاريخ الإنشاء',
@@ -97,5 +98,10 @@ return [
     'ask_about' => 'يستفسر عن',
     'features' => 'المميزات',
 
+    'years_of_exp' => 'عدد سنوان الخبرة',
+    'num_of_clients' => 'عدد العملاء',
+    'num_of_projects' => 'عدد المشاريع التي تم تجهيزها',
+    'num_of_machines' => 'عدد الماكينات التي تمت صناعتها',
+    'youtube_video' => 'الفيديو التعريفي'
 
 ];

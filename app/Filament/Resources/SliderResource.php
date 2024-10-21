@@ -86,7 +86,7 @@ class SliderResource extends Resource
 
     public static function getNavigationGroup(): ?string
     {
-        return __('pages.settings');
+        return __('pages.sections');
     }
 
     public static function getTitleCasePluralModelLabel(): string
@@ -101,6 +101,6 @@ class SliderResource extends Resource
 
     public static function getModelLabel(): string
     {
-        return __('pages.image');
+        return __('pages.slider');
     }
 }

@@ -28,28 +28,13 @@ class ContactUsController extends Controller
         $request->validate([
             'email' => ['required', 'email'],
             'phone' => ['required', 'numeric'],
-            'company_name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
             'description' => ['required'],
-            'product_ids' => ['nullable', 'string']
         ]);
-
         // Store the contact inquiry details
-        $contactUs = ContactUs::create($request->only(['email', 'phone', 'company_name', 'description']));
+        ContactUs::create($request->only(['email', 'phone', 'name', 'description']));
 
-        // Process the product IDs
-        if ($request->filled('product_ids')) {
-            $productIds = explode(',', $request->input('product_ids'));
-
-            // Store each product ID related to this inquiry
-            foreach ($productIds as $productId) {
-                InquiryProducts::create([
-                    'contact_us_id' => $contactUs->id,
-                    'product_id' => $productId
-                ]);
-            }
-        }
-
-        return redirect()->route('thanks');
+        return redirect()->route('home')->with('success', 'تم إرسال رسالتك بنجاح! شكرًا لتواصلك معنا. سنقوم بالرد على استفسارك في أقرب وقت ممكن.');
     }
 
     public function successRedirect()
